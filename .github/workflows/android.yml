@@ -1,6 +1,7 @@
 name: Android CI
 
 on:
+  workworkflow_dispatch:
   push:
     branches: [ "develop" ]
   pull_request:
