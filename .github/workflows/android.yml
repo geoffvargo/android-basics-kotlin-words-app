@@ -2,11 +2,12 @@ name: Android CI
 
 on:
   push:
-    branches: '**'
+    branches:
+      - "**"
   pull_request:
     branches: [ "develop" ]
   workflow_dispatch:
-    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +23,7 @@ jobs:
 
     - uses: actions/checkout@v4
     - name: set up JDK 17
-      uses: actions/setup-java@v3
+      uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
@@ -30,7 +31,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build 
+      run: ./gradlew build
    # Create APK Debug
     - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
       run: ./gradlew assembleDebug
@@ -42,7 +43,7 @@ jobs:
     # Create Bundle AAB Release
     # Noted for main module build [main_project_module]:bundleRelease
     - name: Build app bundle release (AAB) - ${{ env.main_project_module }} module
-      run: ./gradlew bundle     
+      run: ./gradlew bundle
 
     # Upload Artifact Build
       # Noted For Output [main_project_module]/build/outputs/apk/debug/
