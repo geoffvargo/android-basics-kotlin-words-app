@@ -52,3 +52,8 @@ jobs:
       with:
         name: ${{ env.date_today}} - ${{env.playstore_name}} - ${{ env.repository_name }} - APK(s) debug generated
         path: app/build/outputs/
+
+    - name: Publish Package
+      run: ./gradlew publish
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
