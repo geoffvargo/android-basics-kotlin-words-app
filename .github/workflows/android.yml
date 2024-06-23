@@ -23,11 +23,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build 
-    - name: React Native Android Build APK
+    - name: upload-artifact
       # You may pin to the exact commit or the version.
       # uses: realabbas/Github-Actions-React-Native@047b6256928e9f54ec66393c95817b702c4a0ee2
       uses: actions/upload-artifact@v4.3.3
       with:
         # name: ouput.apk
-        path: output/** 
-          
+        path: output/*.apk          
