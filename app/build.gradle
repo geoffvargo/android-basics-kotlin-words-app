@@ -18,6 +18,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'maven-publish'
 }
 
 android {
@@ -52,6 +53,25 @@ android {
         viewBinding = true
     }
     namespace 'com.example.wordsapp'
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/geoffvargo/android-basics-kotlin-words-app")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("geoffvargo")
+                password = project.findProperty("gpr.key") ?: System.getenv("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")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+
 }
 
 dependencies {
