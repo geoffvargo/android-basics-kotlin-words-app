@@ -65,3 +65,4 @@ jobs:
         upload_url: https://maven.pkg.github.com/geoffvargo/android-basics-kotlin-words-app
         asset_path: app/build/outputs/apk/debug/app-debug.apk
         asset_name: app-debug.apk
+        content_type: application/vnd.android.package-archive
