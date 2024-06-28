@@ -63,5 +63,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: https://maven.pkg.github.com/geoffvargo/android-basics-kotlin-words-app
-        # asset_path: app/build/outputs/apk/demo/release/app-demo-release.apk
-        # asset_name: app-demo-release.apk
+        asset_path: app/build/outputs/apk/debug/app-debug.apk
+        asset_name: app-debug.apk
