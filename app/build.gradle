@@ -61,6 +61,14 @@ android {
 }
 
 publishing {
+    publications {
+        gpr(MavenPublication) {
+            groupId 'com.geoffvargo' // Replace with group ID
+            artifactId "app"
+            version "1.0"
+            artifact("app/outputs/apk/debug/app-debug.apk")
+        } 
+    }
     repositories {
         maven {
             name = "GitHubPackages"
@@ -71,16 +79,7 @@ publishing {
             }
         }
     }
-publications {
-        create<MavenPublication>("gpr") {
-            run {
-                groupId 'com.geoffvargo' // Replace with group ID
-                artifactId "app"
-                version "1.0"
-                artifact("app/outputs/apk/debug/app-debug.apk")
-            }
-        }
-    }
+
 
 
 }
