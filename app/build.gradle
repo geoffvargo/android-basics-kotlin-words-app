@@ -21,6 +21,11 @@ plugins {
     id 'maven-publish'
 }
 
+/**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
+def githubPropertiesFile = rootProject.file("github.properties");
+def githubProperties = new Properties()
+githubProperties.load(new FileInputStream(githubPropertiesFile))
+
 android {
     compileSdk 34
 
