@@ -40,18 +40,18 @@ jobs:
     - name: Build apk release project (APK) - ${{ env.main_project_module }} module
       run: ./gradlew assemble
 
-    # Create Bundle AAB Release
-    # Noted for main module build [main_project_module]:bundleRelease
-    - name: Build app bundle release (AAB) - ${{ env.main_project_module }} module
-      run: ./gradlew bundle
+    # # Create Bundle AAB Release
+    # # Noted for main module build [main_project_module]:bundleRelease
+    # - name: Build app bundle release (AAB) - ${{ env.main_project_module }} module
+    #   run: ./gradlew bundle
 
-    # Upload Artifact Build
-      # Noted For Output [main_project_module]/build/outputs/apk/debug/
-    - name: Upload APK Debug - ${{ env.repository_name }}
-      uses: actions/upload-artifact@v4
-      with:
-        name: ${{ env.date_today}} - ${{ env.repository_name }} - APK(s) debug generated
-        path: app/build/outputs/
+    # # Upload Artifact Build
+    #   # Noted For Output [main_project_module]/build/outputs/apk/debug/
+    # - name: Upload APK Debug - ${{ env.repository_name }}
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: ${{ env.date_today}} - ${{ env.repository_name }} - APK(s) debug generated
+    #     path: app/build/outputs/
 
     - name: Publish Package
       run: ./gradlew publish
