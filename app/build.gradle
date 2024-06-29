@@ -62,7 +62,7 @@ android {
 
 publishing {
     publications {
-        gpr(MavenPublication) {
+        bar(MavenPublication) {
             groupId 'com.geoffvargo' // Replace with group ID
             artifactId "app"
             version "1.0"
