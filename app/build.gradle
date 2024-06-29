@@ -74,7 +74,7 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/geoffvargo/android-basics-kotlin-words-app")
             credentials {
-                username = System.getenv("GITHUB_USER_ID")
+                username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
             }
         }
