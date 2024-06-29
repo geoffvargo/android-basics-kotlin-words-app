@@ -32,13 +32,13 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-   # Create APK Debug
-    - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
-      run: ./gradlew assembleDebug
+   # # Create APK Debug
+   #  - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
+   #    run: ./gradlew assembleDebug
 
-    # Create APK Release
-    - name: Build apk release project (APK) - ${{ env.main_project_module }} module
-      run: ./gradlew assemble
+    # # Create APK Release
+    # - name: Build apk release project (APK) - ${{ env.main_project_module }} module
+    #   run: ./gradlew assemble
 
     # # Create Bundle AAB Release
     # # Noted for main module build [main_project_module]:bundleRelease
@@ -56,8 +56,9 @@ jobs:
     - name: Publish Package
       run: ./gradlew publish
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
+        GPR_USER: ${{ secrets.GPR_USER_ID}}
+        GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        
     # - name: Upload app
     #   uses: actions/upload-release-asset@v1
     #   env:
