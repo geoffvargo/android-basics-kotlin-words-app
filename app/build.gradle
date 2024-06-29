@@ -71,11 +71,15 @@ publishing {
             }
         }
     }
-//     publications {
-//         gpr(MavenPublication) {
-//             from(components.java)
-//         }
-//     }
+publications {
+        bar(MavenPublication) {
+            groupId 'com.geoffvargo' // Replace with group ID
+            artifactId getArtificatId()
+            version getVersionName()
+            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+        }
+    }
+
 
 }
 
