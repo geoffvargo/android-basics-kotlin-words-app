@@ -61,8 +61,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/geoffvargo/android-basics-kotlin-words-app")
             credentials {
-                username = project.findProperty("gpr.user") ?: "geoffvargo"
-                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
+                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
             }
         }
     }
