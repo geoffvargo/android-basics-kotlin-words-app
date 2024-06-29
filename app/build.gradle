@@ -74,9 +74,9 @@ publishing {
 publications {
         bar(MavenPublication) {
             groupId 'com.geoffvargo' // Replace with group ID
-            artifactId getArtificatId()
-            version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtificatId()}-release.aar")
+            artifactId "app"
+            version "1.0"
+            artifact("app/outputs/apk/debug/app-debug.apk")
         }
     }
 
