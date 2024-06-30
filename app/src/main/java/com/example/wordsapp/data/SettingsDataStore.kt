@@ -2,6 +2,7 @@ package com.example.wordsapp.data
 
 import android.content.*
 import androidx.datastore.core.*
+import androidx.datastore.core.IOException
 import androidx.datastore.preferences.*
 import androidx.datastore.preferences.core.*
 import kotlinx.coroutines.flow.*

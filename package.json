@@ -1,0 +1,25 @@
+{
+	"name": "@geoffvargo/android-basics-kotlin-words-app",
+	"version": "1.0.11",
+	"description": "A group of useless react hooks",
+	"main": "",
+	"scripts": {
+		"test": ""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/geoffvargo/android-basics-kotlin-words-app.git"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"keywords": [
+		""
+	],
+	"author": "Geoff Vargo",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/geoffvargo/android-basics-kotlin-words-app/issues"
+	},
+	"homepage": "https://github.com/geoffvargo/android-basics-kotlin-words-app#readme"
+}
