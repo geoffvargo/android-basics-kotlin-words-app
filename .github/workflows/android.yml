@@ -56,7 +56,7 @@ jobs:
     - name: Publish Package
       run: ./gradlew publish
       env:
-        GPR_USER: ${{ secrets.GPR_USER_ID}}
+        GPR_USER: ${{ github.actor}}
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
         
     # - name: Upload app
